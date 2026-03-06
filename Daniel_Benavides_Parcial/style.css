@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Navbar
+{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #ffffff;
+    border-bottom: 2px solid #293132;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+
+}
+.Navbar button
+{
+    background: #ffffff;
+    border-color: #000000;
+    transform: scale(1.05);
+
+}
+.menú
+{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.05);
+
+
+}
+.menú button
+{
+
+     background: #ffffff;
+    border-color: #000000;
+    transform: scale(1.05);
+
+
+}
+.menú-image
+{
+
+    width: 50%;
+    height: 300px;
+    background: #333;
+    border: 2px solid rgb(92, 95, 89);
+    box-shadow: 0 0 20px rgb(144, 156, 141);
+
+    
+
+
+}
+.menú-text
+{
+
+    width: 40%;
+
+}
+.menú h1{
+
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+
+}
+.logo_nav  {
+
+display: flex;
+align-items: center;
+gap: 25px;
+
+}
+.Navbar button{
+
+    background: #ffffff;
+    border-color: #000000;
+    transform: scale(1.05);
+
+}
+ .tienda{
+
+
+     text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.tienda img{
+
+    width: 50%;
+    height: 300px;
+    border: 2px solid rgb(92, 95, 89);
+    box-shadow: 0 0 20px rgb(144, 156, 141);
+    align-items: start;
+
+
+
+}
+.tienda h1
+{
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+
+
+}
+
+.tienda button{
+    
+    background: #ffffff;
+    border-color: #000000;
+    transform: scale(2.05);
+
+
+
+}
+
