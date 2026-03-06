@@ -1,0 +1,445 @@
+
+
+
+body{
+    font-family:Arial, sans-serif;
+    background-color: #0F0F1E;
+}
+header{
+    
+    background-color: #0F0F1E;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header h1{
+    font-weight:bolder;
+    font-size: 30px;
+    color: crimson;
+    text-shadow: 2px 2px 5px;
+}
+.navbar{
+    background-color: #0F0F1E;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+}
+.navbar a{
+    text-decoration: none;
+    font-weight:700 ;
+}
+input{
+    background-color: rgb(34, 0, 0) ;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+}
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.menu a{
+    color: white;
+    padding: 2vw;
+}
+.menu img{
+    width: 3vw;
+    height: 3vw;
+}
+.banner{
+    background: linear-gradient(to right, #0F0F1E, #1A1A2E );
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.banner img{
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 40px crimson;
+}
+.textoBanner{
+    padding: 2rem;
+    color: white;
+    font-size: large;
+}
+.textoBanner h1{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+.destacado{
+    color: crimson;
+}
+.textoDegradado{
+    background: linear-gradient(#ff4d6d, #ff8fa3);
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+.textoBanner p{
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    padding: 0rem 10vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+}
+.boton button{
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.boton button:hover{
+    background-color: darkred;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px crimson; /* Crea un aura roja al pasar el mouse */
+}
+.personal{
+    padding: 2rem 2rem;
+    background-color: #1A1A2E ;
+}
+.personal h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.Textocrimson{
+    color: crimson;
+}
+.personajes{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.info{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.info h3{
+    margin: 3rem;
+    font-weight: 900;
+}
+.info img{
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.info img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px crimson;
+}
+.NuestrosServicios{
+    padding: 5rem 2rem;
+    padding-top:3rem ;
+}
+.NuestrosServicios h2{
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+.NuestrosServicios p{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.Servicios{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    padding-top: 2rem;
+    
+}
+.infoS{
+    color: white;
+    background-color: #2D2D44;
+    padding-bottom:15px ;
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    
+    
+}
+.infoS img{
+    width: 350px;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+.infoS h3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ .infoS p{
+    color:rgba(255, 255, 255, 0.692);
+    line-height: 1.5;
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    padding: 0rem 2rem;
+    transition: 3s ease;
+ }
+ .infoS:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px crimson;
+
+ }
+ .botonS{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+ }
+ .botonS button{
+    border: none;
+    color: crimson;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: rgba(220, 20, 60, 0.247);
+    border: 0.5px solid crimson;
+    border-radius: 10px;
+    padding: 0.5rem 5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+ }
+ .botonS button:hover{
+    background-color: rgba(139, 0, 0, 0.452);
+    transform: scale(1.1);
+ }
+ .Descuento{
+    background: #1A1A2E;
+    color: white;
+    padding-bottom: 15px;
+ }
+ .Descuento h1{
+    font-size: 40px;
+    font-weight: 900;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+ }
+ .Descuento p{
+    color: rgba(255, 255, 255, 0.685);
+    display: flex;
+    justify-content: center;
+ }
+.zonalogos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que bajen si no caben */
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.item-descuento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Ancho fijo para que todos midan igual */
+}
+
+.logos {
+    background-color: #a4a4da81;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px crimson;
+    /* CAMBIO: Usamos variables para el tamaño */
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease;
+}
+
+.logos img {
+    width: 60%; /* La imagen siempre será proporcional al círculo */
+    height: auto;
+}
+
+.item-descuento h4 {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+ .botonContratanos{
+    display: flex;
+    justify-content: center;
+ }
+ .botonContratanos button{
+    border: none;
+    border-radius: 10px;
+    color: crimson;
+    border: 0.5px solid crimson;
+    background-color: rgba(220, 20, 60, 0.247);
+    margin:2rem 0rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+ }
+ .botonContratanos button:hover{
+    transform: scale(1.1);
+    background-color: rgba(139, 0, 0, 0.452);
+ }
+ .reseñas{
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para que el título esté arriba */
+    align-items: center;
+    padding: 4rem 5%; /* 5% se adapta al tamaño de la pantalla */
+    gap: 3rem;
+    min-height: auto;
+ }
+ .LoQueDicen{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 0rem 5rem;
+ }
+ .zonaReseñas{
+    display: flex;
+    gap: 50px;
+ }
+ .tarjetasReseñas{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color:#2D2D44;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+ }
+ .reseñaHeader{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+ }
+ .reseñaHeader img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background-color: #2D2D44;
+    border-radius: 50%;
+ }
+ .estrellas{
+    color: gold;
+    font-size: 20px;
+ }
+ .footer{
+    color: white;
+    padding: 1rem 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ }
+
+ .footerBottom{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ .izquierdaFB img{
+    width: 150px;
+    padding-left: 100px;
+
+ }
+ .iconos img{
+   width: 50px;
+   padding-left: 1rem;
+ }
+ .derechaFB{
+    display: flex;
+ }
+ .columnas ul{
+    list-style: none;
+ }
+ .columnas p{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+ }
+ .columnas a{
+    color:rgba(255, 255, 255, 0.692);
+    text-decoration: none;
+    
+ }
+ .escribirEmail{
+    background-color: #1A1A2E;
+    padding: 4rem 5%
+ }
+ .widget{
+    padding: 5%;
+    background: linear-gradient(to right,#ff4d6d, #ff8fa3);
+    border-radius: 10px;
+ }
+ .widget h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+
+ }
+ .zonaEmail{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+ }
+ .zonaEmail input{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 1rem;
+    font-size: 20px;
+ }
+ .zonaEmail button{
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background-color: #0F0F1E;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s ease;
+ }
+ .zonaEmail button:hover{
+    transform: scale(1.1);
+
+ }
+
