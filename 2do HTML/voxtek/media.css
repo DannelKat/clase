@@ -1,0 +1,80 @@
+
+@media (max-width: 768px) {
+
+    
+    .glitch {
+        font-size: 3.5rem; 
+        letter-spacing: 5px;
+    }
+
+   
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    .navbar .logo {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar input {
+        width: 90%; 
+        font-size: 0.9rem;
+    }
+
+   
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-image {
+        height: 250px; 
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .imagenes img {
+        width: 85%; 
+        max-width: 300px;
+    }
+
+   
+    .productostienda, .best-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .producto {
+        width: 90%; 
+    }
+
+    .icons-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    
+    footer p {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+}

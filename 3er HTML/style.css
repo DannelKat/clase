@@ -1,0 +1,45 @@
+* .carrusel-alastor {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    border: 5px solid var(--gold-accent); /* Marco dorado */
+    overflow: hidden; /* ¡Clave! Oculta las fotos que no se ven */
+}
+
+.ventana-carrusel {
+    width: 100%;
+}
+
+.cinta-imagenes {
+    display: flex; /* Pone las imágenes en fila */
+    transition: transform 0.5s ease-in-out; /* Hace que el movimiento sea suave */
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa toda la ventana */
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    filter: sepia(0.3) contrast(1.1); /* Efecto vintage */
+}
+
+/* Botones */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.8);
+    color: var(--gold-accent);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
