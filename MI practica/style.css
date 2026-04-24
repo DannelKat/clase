@@ -1,0 +1,1223 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* --- 1. Variables & Root --- */
+:root {
+    --primary-color: #e71717;
+    --secondary-color: #2b0101;
+    --accent-color: #f43f5e;
+    --bg-dark: #000000;
+    --bg-light: #0c0000;
+    --bg-surface: #310e0e;
+    --text-main: #f7f7f7;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(0, 0, 0, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 2. Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container-custom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* --- 2.5 Promo Bar --- */
+.promo-bar {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* --- 3. Navigation --- */
+.custom-navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-search {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(4px);
+}
+
+.nav-search input {
+    border: none;
+    background: transparent;
+    color: white;
+    width: 180px;
+    outline: none;
+}
+
+.nav-search button {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- 4. Hero Section --- */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    position: relative;
+    background-color: #050000;
+}
+
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 56px;
+    padding: 7rem;
+    box-shadow: 0 50px 150px rgba(0, 0, 0, 0.8);
+    max-width: 1800px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 5.5rem;
+    font-weight: 900;
+    text-shadow: 0 10px 40px rgba(231, 23, 23, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+.hero-box img {
+    width: 100%;
+    max-width: 450px;
+    filter: drop-shadow(0 20px 40px rgba(231, 23, 23, 0.2));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* --- 4.5 Trust Badges --- */
+.trust-badges-section {
+    padding: 6rem 0;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.badge-item {
+    text-align: center;
+}
+
+.badge-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.badge-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* --- 5. Services Section (Vertical Cards) --- */
+.services-section {
+    background-color: var(--bg-surface);
+    padding: 10rem 2rem;
+}
+
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(231, 23, 23, 0.2);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateX(15px);
+    border-color: var(--primary-color);
+    background: rgba(231, 23, 23, 0.05);
+}
+
+.services-text h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+/* --- 6. Services Row Section (Horizontal Grid) --- */
+.services-row-section {
+    padding: 10rem 2rem;
+    background-color: var(--bg-dark);
+}
+
+.services-title {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.service-card-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 4rem 2rem 2.5rem 2rem;
+    border-radius: 24px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.service-card-item:hover {
+    transform: translateY(-15px);
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.card-icon {
+    position: absolute;
+    top: -30px;
+    left: 25px;
+    width: 65px;
+    height: 65px;
+    background: #2b0101;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color);
+}
+
+.service-card-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* --- 7. Feature Highlight Section --- */
+.feature-highlight-section {
+    padding: 0;
+    background-color: var(--bg-light);
+    overflow: hidden;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+
+.feature-image-box {
+    height: 100%;
+    min-height: 600px;
+}
+
+.feature-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.feature-text-box {
+    padding: 8rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-text-box h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
+
+.feature-text-box p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(231, 23, 23, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    background: #ff2a2a;
+    box-shadow: 0 20px 40px rgba(231, 23, 23, 0.5);
+}
+
+/* --- 7.5 Products Section --- */
+.products-section {
+    padding: 10rem 0;
+    background-color: var(--bg-dark);
+}
+
+.section-header-left {
+    margin-bottom: 4rem;
+}
+
+.section-header-left h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.products-grid-ecom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.product-item-e {
+    transition: var(--transition);
+}
+
+.product-img-box {
+    width: 100%;
+    height: 450px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.product-details-e h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-e {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-link {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: underline;
+}
+
+/* --- 7.6 E-commerce Categories --- */
+.ecom-categories-section {
+    padding: 10rem 0;
+    background-color: var(--bg-light);
+}
+
+.ecom-cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.cat-card-e {
+    position: relative;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cat-img-e {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+}
+
+.btn-pill {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 2.5rem;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 8. Testimonials Section --- */
+.testimonials-section {
+    padding: 10rem 0;
+    background-color: #050000;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.testimonials-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.testimonial-card {
+    background: rgba(44, 26, 26, 0.4);
+    padding: 6rem 4rem 4rem 4rem;
+    border-radius: 40px;
+    border: 1px solid rgba(231, 23, 23, 0.15);
+    position: relative;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    background: rgba(44, 26, 26, 0.6);
+}
+
+.testimonial-user {
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 85px;
+    height: 85px;
+    background: var(--primary-color);
+    border-radius: 24px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid #310e0e;
+}
+
+.user-info h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.user-info p {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.9;
+}
+
+.quote-icon {
+    position: absolute;
+    bottom: -10px;
+    right: 40px;
+    font-size: 10rem;
+    color: rgba(231, 23, 23, 0.15);
+    font-family: 'Times New Roman', serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.testimonials-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* --- 8.5 Portfolio Structure Sections --- */
+
+/* What I Do */
+.what-i-do-section {
+    padding: 10rem 0;
+    background-color: var(--bg-dark);
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 1.5rem auto 0;
+}
+
+.services-grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.service-item-p {
+    text-align: center;
+}
+
+.service-img-p {
+    width: 100%;
+    height: 350px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-item-p h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.service-item-p p {
+    color: var(--text-muted);
+}
+
+/* About Me */
+.about-me-portfolio {
+    padding: 10rem 0;
+    background-color: #0c0000;
+}
+
+.about-grid-p {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+}
+
+.about-img-p {
+    position: relative;
+    height: 500px;
+    background: #1a1a1a;
+    border-radius: 12px;
+}
+
+.img-stack {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+.about-text-p h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.about-checks {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.about-checks li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.about-checks li span {
+    color: var(--primary-color);
+}
+
+/* Portfolio */
+.portfolio-section {
+    padding: 10rem 0;
+    background-color: var(--bg-dark);
+}
+
+.portfolio-grid-p {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.portfolio-item-p {
+    text-align: center;
+}
+
+.portfolio-img-p {
+    width: 100%;
+    height: 400px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-item-p h3 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.portfolio-cta {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+/* Skills Showcase */
+.skills-showcase-section {
+    padding: 10rem 0;
+    background-color: #0c0000;
+}
+
+.skills-slider-p {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.skill-card-p {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-icon-p {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-card-p h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.skill-card-p p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* CTA Banner */
+.cta-banner-section {
+    padding: 8rem 0;
+    background-color: #e7e7e7;
+    color: black;
+    text-align: center;
+}
+
+.cta-banner-content h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    border: 2px solid black;
+    color: black;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background: black;
+    color: white;
+}
+
+/* --- 8.6 Expansion Sections --- */
+
+/* Staff Section */
+.staff-section {
+    padding: 10rem 0;
+    background-color: var(--bg-light);
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.staff-card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(231, 23, 23, 0.1);
+    transition: var(--transition);
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.staff-img {
+    width: 120px;
+    height: 120px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    margin: 0 auto 2rem auto;
+    border: 2px solid var(--primary-color);
+}
+
+/* Rooms Section (Pricing) */
+.rooms-section {
+    padding: 10rem 0;
+    background-color: var(--bg-dark);
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.room-card {
+    background: var(--bg-surface);
+    padding: 4rem 3rem;
+    border-radius: 32px;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.room-card.featured {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 30px 60px rgba(231, 23, 23, 0.2);
+}
+
+.room-tag {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.room-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.room-card ul {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.room-card ul li {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 10rem 0;
+    background-color: var(--bg-light);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-question {
+    padding: 2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question span {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    color: var(--text-muted);
+    line-height: 1.8;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 2rem 2rem 2rem;
+    max-height: 200px;
+    opacity: 1;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+.faq-question span {
+    transition: transform 0.3s ease;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 10rem 0;
+    background-color: var(--bg-dark);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background: #1a1a1a;
+    border-radius: 20px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-color);
+}
+
+.g-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.g-tall {
+    grid-row: span 2;
+}
+
+/* Contact Hub */
+.contact-hub-section {
+    padding: 10rem 0;
+    background-color: var(--bg-light);
+}
+
+.contact-hub-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 6rem;
+}
+
+.newsletter-box, .contact-form-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4rem;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.newsletter-box h2, .contact-form-box h2 {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form, .contact-form {
+    margin-top: 3rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.newsletter-form input, .contact-form input, .contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: white;
+    width: 100%;
+}
+
+.newsletter-form button {
+    padding: 0 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form textarea {
+    height: 180px;
+    margin-bottom: 1.5rem;
+    resize: none;
+}
+
+/* --- 9. Footer --- */
+.main-footer {
+    padding: 8rem 0 3rem 0;
+    background-color: #000000;
+    border-top: 1px solid rgba(231, 23, 23, 0.1);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 6rem;
+    margin-bottom: 6rem;
+}
+
+.footer-brand img {
+    height: 60px;
+    margin-bottom: 2rem;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2.5rem;
+    max-width: 350px;
+}
+
+.footer-contact p {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* --- 10. Responsive Design --- */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .hero-content,
+    .section-container,
+    .feature-grid,
+    .footer-top,
+    .footer-links-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-glass-container {
+        padding: 4rem 2rem;
+    }
+
+    .testimonial-user {
+        position: relative;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-card {
+        padding-top: 3rem;
+    }
+
+    .feature-image-box,
+    .hero-box {
+        order: -1;
+    }
+
+    .footer-brand p {
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
