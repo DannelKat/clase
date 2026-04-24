@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alastor | The Radio Demon</title>
+    <meta name="description" content="Umgh.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+          }
+        }
+    </script>
+</head>
+<body>
+    <img src="imagenes/Hazbin_Hotel_(with_A24_logo).svg" alt="Hazbin Hotel" class="hazbin-logo">
+    <nav id="navbar">
+        <div class="logo"><img src="imagenes/logo.png" alt="ALASTOR" id="nav-logo"></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Alastor</a></li>
+            <li><a href="#broadcast">Merch</a></li>
+            <li><a href="#contracts">Relaciones</a></li>
+        </ul>
+    </nav>
+    <section id="hero" class="scene-container">
+        <div id="canvas-hero" class="three-bg"></div>
+        <div class="content">
+            <h1 class="glitch" data-text="THE RADIO DEMON">THE RADIO DEMON</h1>
+            <p>Sonríe. Nunca estás completamente vestido sin una sonrisa! </p>
+            <button class="cta-button">Sintonizar</button>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="sub-title">a broadcast from the afterlife</span>
+                <h2>¿Cómo contactarlo?</h2>
+                <p>Conocido en todo el Infierno como el Demonio de la Radio, su influencia se extiende a través de las frecuencias de onda corta. Para establecer contacto, es necesario sintonizar un receptor analógico en las coordenadas de transmisión especificadas. Se recomienda mantener la cortesía en todo momento; él valora los modales tanto como el poder.</p>
+                <div class="pearl-divider"></div>
+            </div>
+            <div id="canvas-about" class="three-sub"></div>
+        </div>
+    </section>
+    <section id="broadcast" class="free-section">
+        <div class="merch-header">
+            <h2 class="merch-title">MERCH OFICIAL</h2>
+        </div>
+        <div id="canvas-broadcast" class="three-full"></div>
+        <div class="product-slider">
+            <div class="product-track">
+                <div class="product-card">
+                    <img src="imagenes/camisa.webp" alt="Camiseta Alastor">
+                    <div class="product-info"><h3>Camiseta "Demonio de la Radio"</h3><p>$35.00</p></div>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/binder.webp" alt="Figura Alastor y Nifty">
+                    <div class="product-info"><h3>Figura de Alastor y Nifty</h3><p>$45.00</p></div>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/disco.webp" alt="Figura Alastor Chibi">
+                    <div class="product-info"><h3>Figura Alastor Chibi</h3><p>$30.00</p></div>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/pin.webp" alt="Pin Alastor">
+                    <div class="product-info"><h3>Pin Coleccionable</h3><p>$12.00</p></div>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/standee.webp" alt="Figura Grande Alastor">
+                    <div class="product-info"><h3>Figura Grande de Alastor</h3><p>$25.00</p></div>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/card.webp" alt="Tarjeta Alastor Humano">
+                    <div class="product-info"><h3>Tarjeta Alastor Humano</h3><p>$15.00</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contracts" style="background-color: #0a0a0a;">
+        <div id="canvas-contracts" class="three-full"></div>
+        <div class="relations-container">
+            <h2 class="merch-title" style="position: static; transform: none; margin-bottom: 3rem; opacity: 1; text-align: center; border: none; padding: 0;">RELACIONES</h2>
+            <div class="relations-grid">
+                <div class="relation-card">
+                    <img src="imagenes/vox.jpg" alt="Vox" class="relation-img">
+                    <h3>Vox</h3>
+                    <p>"Mi querido y viejo amigo. Es fascinante ver cómo una mente que alguna vez fue prometedora terminó atrapada en una caja de cristal tan ruidosa. Su obsesión por la tecnología solo demuestra lo mucho que teme quedar en el olvido, una lástima que el progreso no pueda comprar la clase."</p>
+                </div>
+                <div class="relation-card">
+                    <img src="imagenes/lucifer.jpg" alt="Lucifer" class="relation-img">
+                    <h3>Lucifer</h3>
+                    <p>"El gran Rey del Infierno en toda su diminuta gloria. Nuestra relación es un duelo constante de sonrisas forzadas y comentarios mordaces. Es fascinante ver cómo alguien con tanto poder celestial puede ser tan terriblemente incompetente cuando se trata de manejar los asuntos de su propia hija."</p>
+                </div>
+                <div class="relation-card">
+                    <img src="imagenes/rosie.jpg" alt="Rosie" class="relation-img">
+                    <h3>Rosie</h3>
+                    <p>"Mi queridísima e impecable Rosie. No existe en este vacío alma más refinada ni consejera más astuta. Nuestra unión va mucho más allá de los negocios de Cannibal Town; es un vínculo de etiqueta, confianza y, por supuesto, de un hambre compartida por las cosas finas de la vida."</p>
+                </div>
+                <div class="relation-card">
+                    <img src="imagenes/charlie.jpg" alt="Charlie" class="relation-img">
+                    <h3>Charlie</h3>
+                    <p>"La princesa y su adorable sueño imposible. He decidido prestarle mi apoyo simplemente para ver cuánto tiempo tarda esa chispa de esperanza en convertirse en el más delicioso caos. Después de todo, no hay nada más entretenido que una causa perdida con un toque de optimismo."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img src="imagenes/hazbin_footer.webp" alt="Hazbin Divider" class="hazbin-divider">
+    <footer id="footer">
+        <div class="footer-content">
+            <p>© 1933 - Eternidad. Todos los derechos de alma reservados.</p>
+        </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
