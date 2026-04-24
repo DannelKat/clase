@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+h1 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.stats {
+    margin: 20px 0;
+}
+
+.stat-row {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.controls {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#log {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    height: 100px;
+    overflow-y: auto;
+    font-size: 0.8rem;
+}
