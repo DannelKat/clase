@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Estudio - Wireframe Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">LOGO</a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-light btn-sm rounded-pill px-3">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <span class="text-uppercase text-secondary small fw-bold">Subtitle Here</span>
+                <h1 class="display-3 fw-bold mt-2">MAIN TITLE</h1>
+                <p class="text-secondary mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button class="btn btn-primary rounded-pill px-4 mt-3">Get Started</button>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="hero-box glass">
+                    <!-- Three.js Canvas will load here -->
+                    <canvas id="three-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Feature List Section -->
+    <section class="container my-5 py-5">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="glass feature-item">
+                    <h5 class="fw-bold">Lorem 1</h5>
+                    <p class="small text-secondary mb-0">Description text goes here for item one.</p>
+                </div>
+                <div class="glass feature-item">
+                    <h5 class="fw-bold">Lorem 2</h5>
+                    <p class="small text-secondary mb-0">Description text goes here for item two.</p>
+                </div>
+                <div class="glass feature-item">
+                    <h5 class="fw-bold">Lorem 3</h5>
+                    <p class="small text-secondary mb-0">Description text goes here for item three.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <h2 class="fw-bold">TITLE</h2>
+                <p class="text-secondary mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button class="btn btn-outline-light rounded-pill px-4">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points Section -->
+    <section class="container my-5 text-center">
+        <h3 class="fw-bold mb-5">OTHER HEADING</h3>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="glass p-4">
+                    <div class="bg-secondary rounded mb-3 mx-auto" style="width: 40px; height: 40px;"></div>
+                    <h6>Point</h6>
+                    <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="glass p-4">
+                    <div class="bg-secondary rounded mb-3 mx-auto" style="width: 40px; height: 40px;"></div>
+                    <h6>Point</h6>
+                    <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="glass p-4">
+                    <div class="bg-secondary rounded mb-3 mx-auto" style="width: 40px; height: 40px;"></div>
+                    <h6>Point</h6>
+                    <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="glass p-4">
+                    <div class="bg-secondary rounded mb-3 mx-auto" style="width: 40px; height: 40px;"></div>
+                    <h6>Point</h6>
+                    <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="container my-5 py-5 text-center">
+        <h3 class="fw-bold">OUR PORTFOLIO GALLERY HERE</h3>
+        <p class="text-secondary small mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+        <div class="d-flex justify-content-center gap-4 mb-4 border-bottom border-secondary pb-2">
+            <a href="#" class="text-decoration-none text-white small fw-bold">Category 1</a>
+            <a href="#" class="text-decoration-none text-secondary small">Category 2</a>
+            <a href="#" class="text-decoration-none text-secondary small">Category 3</a>
+            <a href="#" class="text-decoration-none text-secondary small">Category 4</a>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="glass grid-big"></div>
+            <div class="glass"></div>
+            <div class="glass grid-big"></div>
+            <div class="glass"></div>
+            <div class="glass"></div>
+            <div class="glass"></div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="container my-5 py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="glass" style="height: 350px;"></div>
+            </div>
+            <div class="col-lg-6 offset-lg-1 mt-4 mt-lg-0">
+                <h3 class="fw-bold">The Best Next Heading Here</h3>
+                <p class="text-secondary mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div class="bg-white rounded px-3 py-2 mt-4" style="width: fit-content; color: black;">
+                    Learn More
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container my-5 py-5 text-center">
+        <h3 class="fw-bold mb-5">Our Happy Customer Thoughts</h3>
+        <div class="row g-4 text-start">
+            <div class="col-md-6">
+                <div class="glass testi-card">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="bg-secondary rounded" style="width: 50px; height: 50px;"></div>
+                        <div>
+                            <h6 class="mb-0">John Smith</h6>
+                            <span class="small text-secondary">President</span>
+                        </div>
+                    </div>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="quote-icon">“</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="glass testi-card">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="bg-secondary rounded" style="width: 50px; height: 50px;"></div>
+                        <div>
+                            <h6 class="mb-0">Dannel Green</h6>
+                            <span class="small text-secondary">Manager</span>
+                        </div>
+                    </div>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="quote-icon">“</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">DannelKat</h5>
+                    <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <div class="bg-secondary rounded" style="width: 30px; height: 30px;"></div>
+                        <div class="bg-secondary rounded" style="width: 30px; height: 30px;"></div>
+                        <div class="bg-secondary rounded" style="width: 30px; height: 30px;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 footer-col">
+                    <h5>NAVIGATION</h5>
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Portfolio</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h5>SERVICES</h5>
+                    <a href="#" class="footer-link">Service 1</a>
+                    <a href="#" class="footer-link">Service 2</a>
+                    <a href="#" class="footer-link">Service 3</a>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>SUPPORT</h5>
+                    <a href="#" class="footer-link">Custom Support</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
